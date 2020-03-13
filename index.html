@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+  <h1 >Welcome to Rock Paper Scissors</h1>
+  <div class = "pic">
+    <div>
+    <img id = 'userPic' src="./images/default.jpeg" alt="User Selection Pic">
+    </div>
+    <div>
+      <img id = 'compPic' src="./images/default.jpeg" alt="Computer Selection Pic">
+    </div>
+  </div>
+  <div class = 'buttons'>
+    <ul>
+      <li>
+        <button id ='rockBtn'>Rock</button>
+      </li>
+      <li>
+        <button id ='paperBtn'>Paper</button>
+      </li>
+      <li>
+        <button id = 'scissorsBtn'>Scissors</button>
+      </li>
+    </ul>
+  </div>
+  <button onclick= 'gameLogic' id='startBtn'>Start</button>
+  
+</body>
+<script src="app.js"></script>
+</html>
