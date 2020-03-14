@@ -4,43 +4,45 @@ let scissorsBtn = document.getElementById('scissorsBtn');
 let userPic = document.getElementById('userPic');
 let compPic = document.getElementById('compPic');
 let startBtn = document.getElementById('startBtn');
+startBtn.addEventListener('click', computerLogic);
+rockBtn.addEventListener('click', rockChoice);
+paperBtn.addEventListener('click', paperChoice);
+scissorsBtn.addEventListener('click', scissorsChoice);
 
 let comp = 0
 let user = 0
 
 
-function gameLogic() {
-  console.log('game started')
-  let num = Math.floor(Math.random() * 2)
-  console.log(num)
-  if (num === 1){
-    userPic.src = './images/rock.jpeg'
-    user = 1
-  } else if (num === 2) {
-    userPic.src = './images/paper.jpeg'
-    user = 2
-  } else if (num === 0) {
-    userPic.src = './images/scissors.jpeg'
-    user = 0
-  } else {
-  }
-  computerLogic();
-};
+function rockChoice(){
+  userPic.src = './images/rock.jpeg'
+  user = 'rock'
+}
 
-startBtn.addEventListener('click', gameLogic);
+function scissorsChoice (){
+  userPic.src = './images/scissors.jpeg'
+  user = 'scissors'
+}
+
+function paperChoice(){
+  userPic.src = './images/paper.jpeg'
+  user = 'paper'
+}
+
+
+
 
 function computerLogic(){
   let num = Math.floor(Math.random() * 2)
   console.log(num)
   if (num === 1){
     compPic.src = './images/rock.jpeg'
-    user = 1
+    comp = 'rock'
   } else if (num === 2) {
     compPic.src = './images/paper.jpeg'
-    user = 2
+    comp = 'paper'
   } else if (num === 0) {
     compPic.src = './images/scissors.jpeg'
-    user = 0
+    comp = 'scissors'
   } else {
   }
   
@@ -51,17 +53,36 @@ function whoWins() {
   console.log(whoWins)
   if (user === comp ){
     console.log("it is a tie");
-  }else if (user === 1 && comp === 2 ){
+    tie()
+  }else if (user === 'rock' && comp === 'paper' ){
     console.log('comp wins');
-  } else if ( user === 1 && comp === 0){
+    loser()
+  } else if ( user === 'rock' && comp === 'scissors'){
     console.log('You win');
-  } else if (user === 2 && comp === 1){
+    winner()
+  } else if (user === 'paper' && comp === 'rock'){
     console.log('user wins');
-  } else if (user === 2 && comp === 0){
+    winner()
+  } else if (user === 'paper' && comp === 'scissors'){
     console.log('comp wins');
-  } else if (user === 0 && comp === 1){
+    localStorage()
+  } else if (user === 'scissors' && comp === 'rock'){
     console.log('comp win');
-  } else if (user === 0 && comp === 2){
+    loser()
+  } else if (user === 'scissors' && comp === 'paper'){
     console.log('you win');
+    winner()
   }
+}
+
+function winner() {
+  alert('You won! You worked hard for this one!')
+}
+
+function loser() {
+  alert('Man that was a close one but you still lost.')
+}
+
+function tie(){
+  alert("Nice try bud, maybe you'll win this next time")
 }

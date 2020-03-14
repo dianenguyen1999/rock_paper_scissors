@@ -9,28 +9,25 @@
 <body>
 
   <h1 >Welcome to Rock Paper Scissors</h1>
+  <p>Choose your move, then click start.</p>
   <div class = "pic">
     <div>
+      <h3>User Choice</h3>
     <img id = 'userPic' src="./images/default.jpeg" alt="User Selection Pic">
     </div>
     <div>
+      <h3>Computer Choice</h3>
       <img id = 'compPic' src="./images/default.jpeg" alt="Computer Selection Pic">
     </div>
   </div>
   <div class = 'buttons'>
     <ul>
-      <li>
-        <button id ='rockBtn'>Rock</button>
-      </li>
-      <li>
-        <button id ='paperBtn'>Paper</button>
-      </li>
-      <li>
-        <button id = 'scissorsBtn'>Scissors</button>
-      </li>
+        <button class = 'userBtn' id ='rockBtn'>Rock</button>
+        <button class = 'userBtn' id ='paperBtn'>Paper</button>
+        <button class = 'userBtn' id = 'scissorsBtn'>Scissors</button>
     </ul>
   </div>
-  <button onclick= 'gameLogic' id='startBtn'>Start</button>
+  <button  id='startBtn'>Start</button>
   
 </body>
 <script src="app.js"></script>
