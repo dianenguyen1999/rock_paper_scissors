@@ -13,6 +13,7 @@ let comp = 0
 let user = 0
 
 
+
 function rockChoice(){
   userPic.src = './images/rock.jpeg'
   user = 'rock'
@@ -86,3 +87,4 @@ function loser() {
 function tie(){
   alert("Nice try bud, maybe you'll win this next time")
 }
+
