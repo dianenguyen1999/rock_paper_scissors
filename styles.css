@@ -25,7 +25,9 @@ p {
 }
 
 button {
-  background-color: navajowhite;
+  width: auto;
+  /* display: block; */
+  background-color: #BFCEEE;
   text-align: center;
 }
 
