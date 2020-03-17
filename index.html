@@ -8,17 +8,19 @@
 </head>
 <body>
 
-  <h1 >Welcome to Rock Paper Scissors</h1>
+  <h1 >Let's Play!</h1>
   <p>Choose your move, then click start.</p>
   <div class = "pic">
     <div>
-      <h3>User Choice</h3>
-    <img id = 'userPic' src="./images/default.jpeg" alt="User Selection Pic">
+      <h3>Player1</h3>
+    <img id = 'userPic' src="./images/rockpaperscissors.jpg" alt="User Selection Pic">
     </div>
     
     <div>
+
+
       <h3>Computer Choice</h3>
-      <img id = 'compPic' src="./images/default.jpeg" alt="Computer Selection Pic">
+      <img id = 'compPic' src="./images/rockpaperscissors.jpg" alt="Computer Selection Pic">
     </div>
   </div>
   <div class = 'buttons'>
@@ -28,7 +30,26 @@
         <button class = 'userBtn' id = 'scissorsBtn'>Scissors</button>
     </ul>
   </div>
-  <button  id='startBtn'>Start</button>
+
+
+  <center>
+    <div class="box">
+      <h2>Your Score</h2>
+      <p id="YourScore">0</p>
+      </div>
+      <div class="box">
+        <h2>Computer Score</h2>
+        <p id="computerScore">0</p>
+      </div>
+  </center>
+
+
+  <center>
+    <button  id='startBtn'>Start</button>
+  </center>
+
+
 </body>
 <script src="app.js"></script>
 </html>
+

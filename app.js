@@ -4,15 +4,24 @@ let scissorsBtn = document.getElementById('scissorsBtn');
 let userPic = document.getElementById('userPic');
 let compPic = document.getElementById('compPic');
 let startBtn = document.getElementById('startBtn');
+let YourScore = document.getElementById('YourScore')
+let computerScore = document.getElementById('computerScore')
+
 startBtn.addEventListener('click', computerLogic);
 rockBtn.addEventListener('click', rockChoice);
 paperBtn.addEventListener('click', paperChoice);
 scissorsBtn.addEventListener('click', scissorsChoice);
 
-let comp = 0
-let user = 0
+
+let { user, comp } = newFunction();
 
 
+
+function newFunction() {
+  let comp = 0;
+  let user = 0;
+  return { user, comp };
+}
 
 function rockChoice(){
   userPic.src = './images/rock.jpeg'
@@ -76,15 +85,32 @@ function whoWins() {
   }
 }
 
+// let user_total = newFunction();
+
+// function newFunction() {
+//   let user_total = 0;
+//   let comp_total = 0;
+//   return user_total;
+// }
+
 function winner() {
   alert('You won! You worked hard for this one!')
+  let user_total = 1 
 }
 
 function loser() {
   alert('Man that was a close one but you still lost.')
+  let comp_total = 1
 }
 
 function tie(){
-  alert("Nice try bud, maybe you'll win this next time")
+  alert("It's a tie!")
 }
+
+
+
+function set_comp_total(){
+  compScore.innerHTML = comp_total
+}
+
 
