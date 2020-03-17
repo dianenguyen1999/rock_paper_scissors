@@ -4,8 +4,11 @@ let scissorsBtn = document.getElementById('scissorsBtn');
 let userPic = document.getElementById('userPic');
 let compPic = document.getElementById('compPic');
 let startBtn = document.getElementById('startBtn');
-let YourScore = document.getElementById('YourScore')
-let computerScore = document.getElementById('computerScore')
+let userScore = document.getElementById('userScore')
+let compScore = document.getElementById('compScore')
+
+let user_total = 0
+let comp_total = 0
 
 startBtn.addEventListener('click', computerLogic);
 rockBtn.addEventListener('click', rockChoice);
@@ -66,23 +69,30 @@ function whoWins() {
     tie()
   }else if (user === 'rock' && comp === 'paper' ){
     console.log('comp wins');
+    comp_total += 1
     loser()
   } else if ( user === 'rock' && comp === 'scissors'){
     console.log('You win');
+    user_total += 1
     winner()
   } else if (user === 'paper' && comp === 'rock'){
     console.log('user wins');
+    user_total += 1
     winner()
   } else if (user === 'paper' && comp === 'scissors'){
     console.log('comp wins');
+    comp_total += 1
     localStorage()
   } else if (user === 'scissors' && comp === 'rock'){
     console.log('comp win');
+    comp_total += 1
     loser()
   } else if (user === 'scissors' && comp === 'paper'){
     console.log('you win');
+    user_total += 1
     winner()
   }
+  setTotals()
 }
 
 // let user_total = newFunction();
@@ -95,12 +105,10 @@ function whoWins() {
 
 function winner() {
   alert('You won! You worked hard for this one!')
-  let user_total = 1 
 }
 
 function loser() {
   alert('Man that was a close one but you still lost.')
-  let comp_total = 1
 }
 
 function tie(){
@@ -109,8 +117,9 @@ function tie(){
 
 
 
-function set_comp_total(){
+function setTotals(){
   compScore.innerHTML = comp_total
+  userScore.innerHTML = user_total
 }
 
 
