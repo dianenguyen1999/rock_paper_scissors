@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import GroceryForm from './components/Groceries/GroceryForm'
+import GroceryList from './components/Groceries/GroceryList'
 
 class App extends Component { 
   // constructor(props){ // 
   //   super(props); // bring down everything 
   
   state = {
-    groceries: [
+    Groceries: [
     {id: 1, food: 'eggs', price: '$1.99',complete: false},
     {id: 2, food: 'milk', price: '$2.99', complete: false},
     {id: 3, food: 'cheese', price: '$4.96', complete: false},
@@ -23,9 +25,9 @@ class App extends Component {
   // }
 
   addItem = (food) => {
-    const {groceries} = this.state
+    const {Groceries} = this.state
     const newGroceries = { id: this.getUniqId, food, complete: false  }
-    this.setState({groceries: [newGroceries, ...groceries] })
+    this.setState({Groceries: [newGroceries, ...Groceries] })
   }
   
   render() {
