@@ -40,24 +40,52 @@ class GroceryForm extends Component {
     //   )
     // }
 
+//     render() {
+//         return (
+//         <form onSubmit={this.handleSubmit}>
+//          <input
+//              required
+//              placeholder='Grocery list'
+
+//               name='food'
+//              value={this.state.food}
+//              onChange={this.handleChange}
+//           />
+//           <button>Submit</button>
+//           </form>
+//         )
+//     }
+// }
+
+
     render() {
-        return (
-        <form onSubmit={this.handleSubmit}>
-         <input
-             required
-             placeholder='Grocery list'
+      const {name, price} = this.state
 
-              name='food'
-             value={this.state.food}
-             onChange={this.handleChange}
+      return(
+        <Form onSubmit={this.handleSubmit}>
+
+          <Form.Input
+            label= 'Name'
+            required
+
+            name='name'
+            value='food'
+            onChange={this.handleChange}
           />
-          <button>Submit</button>
-          </form>
-        )
-    }
+
+          <Form.Input
+            label= 'Price'
+            required
+
+            name='price'
+            value='price'
+            onChange={this.handleChange}
+          />
+          <Form.Button color='[]'>Submit</Form.Button>
+        </Form>
+    )
+  }
 }
-
-
 
 
 

@@ -18,11 +18,11 @@ class App extends Component {
   ], 
   }
   
-  // getUniqId = () => {
-  //   return Math.floor((1+ Math.random()) * 0x10000)
-  //   .toString(15)
-  //   .substring(1);
-  // }
+  getUniqId = () => {
+    return Math.floor((1+ Math.random()) * 0x10000)
+    .toString(15)
+    .substring(1);
+  }
 
   addItem = (food) => {
     const {Groceries} = this.state
@@ -31,7 +31,7 @@ class App extends Component {
   }
   
   render() {
-    const { groceries, showForm } = this.state
+    const { Groceries, showForm } = this.state
     return (
     <div>
       <h1>Grocery List</h1>

@@ -7,7 +7,7 @@ const list = ({food, price}) => (
         <h1>(food)</h1>
         <ul>
             {
-                grocery.map( Groceries => <li key={Groceries.id}> {Groceries.food}</li>)
+                Groceries.map( Groceries => <li key={Groceries.id}> {Groceries.food}</li>)
             }
         </ul>
 
